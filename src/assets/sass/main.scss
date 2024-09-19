@@ -74,4 +74,32 @@ header.menu {
       display: none;
     }
   }
+  @media (min-width: $breakpoint-md) {
+    .container {
+      padding: 20px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      nav {
+        background-color: transparent;
+        box-shadow: unset;
+        position: static;
+        width: fit-content;
+        height: unset;
+        padding: 0;
+        .list-container {
+          .header-actions-mobile {
+            display: none;
+          }
+          ul.menu-items-list {
+            height: unset;
+            gap: 30px;
+
+            flex-direction: row;
+          }
+        }
+      }
+    }
+  }
 }
