@@ -13,5 +13,3 @@ openMenuButton.addEventListener('click', () => {
 closeMenuButton.addEventListener('click', () => {
   navElement.classList.remove('open');
 });
-
-console.log(navElement);
