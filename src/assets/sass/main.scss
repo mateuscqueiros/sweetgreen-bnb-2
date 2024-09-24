@@ -195,6 +195,73 @@ section#food-presentation {
         @media (min-width: $breakpoint-sm) {
           font-size: 2rem;
         }
+        &.active {
+          color: black;
+          &::after {
+            content: '';
+            position: absolute;
+            height: 5px;
+            width: 5px;
+            background-color: black;
+            bottom: -5px;
+            left: 50%;
+            transform: translate(-50%);
+            border-radius: 99px;
+          }
+        }
+      }
+    }
+  }
+  .carousel-content {
+    padding: 1rem;
+    .tab-content {
+      display: none;
+      &.active {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 3rem;
+        @media (min-width: $breakpoint-md) {
+          grid-template-columns: repeat(3, 1fr);
+          grid-gap: 1rem;
+        }
+      }
+      .food-card {
+        position: relative;
+        .card-image {
+          img {
+            width: 100%;
+            height: 100%;
+            min-height: 350px;
+            border-radius: 0.4rem;
+            object-fit: cover;
+          }
+          .button {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            font-size: 0.75rem;
+            height: 30px;
+            width: 100px;
+            cursor: auto;
+          }
+        }
+        .card-content {
+          h3 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            text-transform: uppercase;
+          }
+          .order-button {
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            img {
+              margin-left: 0.5rem;
+              height: 1rem;
+              width: 1rem;
+            }
+          }
+        }
       }
     }
   }
